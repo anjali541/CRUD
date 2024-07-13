@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title></title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet" 
+    ++
+/>
+</head>
+
+<body>
+  <!-- 1. create a form in homepage ->/ -->
+     <!-- form must include input (file name ) and button method post and action "/create" -->
+
+  <form action="/create" method="post">
+
+    <h1>HOME PAGE </h1>
+    
+    <input type="text" name="filename">
+
+    <button> create file </button>
+  </form>
+  <h1>List of Files:</h1>
+  <ul>
+      <% files.forEach(function(file) { %>
+        <a href="/file/<%=file%>"><%file%>
+          <li><%=file %><i class="ri-quill-pen-line"></li>
+          </a>
+      <% })%>
+      </ul> 
+      <!-- 13 make form -->
+       <!-- edit /:filename of send use render index.ejs withthe read data in index.ejs create new form below  -->
+       <!-- creatr text area in it and show file data -->
+
+      <hr>
+      <% if(filedata) { %>
+             <form action=""method="">
+      <textarea cols="30" rows="10" name="filedata">
+        <%=filedata%></textarea>
+    </form>
+     <% } %>
+     <!-- add a submit button in new form in "index.js" and action of -->
+     <form action="q"></form>
+</body>
+</html>
